@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo CapivaraDate</title>
+    <link rel="stylesheet" href="dist/cp-date.css">
+</head>
+<body>
+    
+    <cp-date #myComponent></cp-date>
+
+    <script src="dist/cp-date.js"></script>
+
+    <script>
+        capivara.componentBuilder('myComponent')
+                .constants({
+                    title: 'CapivaraDate'
+                })
+                .build();
+    </script>
+    
+</body>
+</html>
