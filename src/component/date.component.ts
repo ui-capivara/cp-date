@@ -3,14 +3,10 @@ export class CapivaraDate {
     public $functions;
     public $bindings;
 
-    private componentName: string;
-    private visibleDate: boolean = false;
 
-    constructor(){
+    constructor() {
     }
-
-    openDate(){
-        this.visibleDate = !this.visibleDate;
-    }
+    
+        
 
 }

@@ -8,15 +8,33 @@
     <link rel="stylesheet" href="dist/cp-date.css">
 </head>
 <body>
+    <style>
+        body, html{
+            width: 100%;
+            height: 100%;
+            background: #F5F5F5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.col-md-3{
+            width: 200px;
+        }
+    </style>
+
     
-    <cp-date #myComponent></cp-date>
+    <div class="col-md-3">
+        <cp-date #myComponent></cp-date>
+    </div>
 
     <script src="dist/cp-date.js"></script>
 
     <script>
         capivara.componentBuilder('myComponent')
                 .constants({
-                    title: 'CapivaraDate'
+                    title: 'CapivaraDate',
+                    format: 'DD/MM/YYYY HH:MM:ss'
                 })
                 .build();
     </script>
