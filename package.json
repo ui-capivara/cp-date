@@ -51,6 +51,10 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^1.12.0"
+    "capivarajs": "^1.12.0",
+    "imask": "^3.2.2",
+    "jquery": "^3.3.1",
+    "jquery-datetimepicker": "^2.5.20",
+    "maskerjs": "^1.8.3"
   }
 }

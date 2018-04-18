@@ -26,18 +26,34 @@
     
     <div class="col-md-3">
         <cp-date #myComponent></cp-date>
+        <br>
+        <button onclick="verPessoa()">Ver</button>
     </div>
 
     <script src="dist/cp-date.js"></script>
 
     <script>
+        let pessoa = { nome: 'Mateus' };
+
         capivara.componentBuilder('myComponent')
+                .context(pessoa)
+                .bindings({
+                    cpModel: 'nascimento'
+                })
                 .constants({
                     title: 'CapivaraDate',
-                    format: 'DD/MM/YYYY HH:MM:ss'
+                    language: 'pt-BR'
+                    // format: 'd/m/Y'                
                 })
                 .build();
+
+
+        function verPessoa(){
+            console.log(pessoa);
+        }
+
     </script>
-    
+
+
 </body>
 </html>
