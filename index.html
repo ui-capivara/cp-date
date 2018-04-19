@@ -42,8 +42,14 @@
                 })
                 .constants({
                     title: 'CapivaraDate',
-                    language: 'pt-BR'
-                    // format: 'd/m/Y'                
+                    // language: 'pt-BR', //Option that select the language format of the cp-date calendar. The standard value is 'pt-BR'. The other choices are the abbreviations of the country names ('en' for english for example)
+                    // format: 'd/m/Y H:i' //Option that format the type of the date shown. The standar value is 'd/m/Y H:i'. The result of this will be on this format: 18/04/2018 22:45
+                    // mask: true // This option will mask the input field on the same way that you set the format option. The standard value is true
+                    // timepicker: true // Option that makes available to pick the hour on the calendar. The standard value is true
+                    // datepicker: true // Option that makes available to pick the date on the calendar. The standard value is true
+                    // openedCalendar: false // Option that hides the input and show directly the calendar . The standard value is false
+                    allowedTimes: ['12:00', '13:00'] // Option is responsible to provide which hours will be able to be picked. allowedTimes accept an array of strings. This strings should match with the hour/minutes you set up in the format option.
+                    
                 })
                 .build();
 

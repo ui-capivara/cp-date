@@ -1,4 +1,3 @@
-import * as Masker from 'maskerjs'
 import $ from 'jquery';
 import 'jquery-datetimepicker/build/jquery.datetimepicker.min.css';
 import 'jquery-datetimepicker';
@@ -8,6 +7,7 @@ export class CapivaraDate {
     public $functions;
     public $bindings;
     private element;
+    private oi;
 
     constructor(scope) {
         this.element = scope.element;
@@ -15,37 +15,36 @@ export class CapivaraDate {
 
     $onViewInit(){
         let el = this.element.querySelector('input.cp-date');
-        $.datetimepicker.setLocale(this.$constants.language)
+        $.datetimepicker.setLocale(this.$constants.language || 'pt-BR')
         $(el).datetimepicker({
-            mask:true,
-            // i18n:{
-            //     de:{
-            //      months:[
-            //       'Januar','Februar','März','April',
-            //       'Mai','Juni','Juli','August',
-            //       'September','Oktober','November','Dezember',
-            //      ],
-            //      dayOfWeek:[
-            //       "So.", "Mo", "Di", "Mi", 
-            //       "Do", "Fr", "Sa.",
-            //      ]
-            //     }
-            //    },
-            // timepicker:false,
+            mask: this.$constants.mask || true,
+            timepicker: this.$constants.timepicker || true,
+            datepicker: this.$constants.datepicker || true,
             format: this.$constants.format || 'd/m/Y H:i',
-            startDate:0,
-            // inline: true,
-            // allowTimes:[
-            //     '12:00', '13:00', '15:00', 
-            //     '17:00', '17:05', '17:20', '19:00', '20:00'
-            //    ],
+            inline: this.$constants.openedCalendar || false,
+            allowTimes: this.$constants.allowedTimes || [],
+            // startDate:0,
             //    minDate:'2018/02/02',
             //    maxDate:'2018/02/03',
             onChangeDateTime: (dp, $input) => {
+                if(this.$constants.allowedTimes && dp){
+                    let fullTime = dp.getHours() + ':' + ('0'+dp.getMinutes()).slice(-2);
+                    let check = false;
+                    console.log(fullTime)
+                    this.$constants.allowedTimes.forEach(element => {
+                        if(element == fullTime){
+                            check = true;
+                        }                        
+                    });
+                    if(!check){
+                        $(el).datetimepicker('reset')
+                    }
+
+                }
+                
                 this.$bindings.cpModel = dp;
             }
             
         });
     }
-
 }

@@ -21,7 +21,14 @@ const Component = {
      * @name constants
      * @description Declares the constants that will be accepted by component. See https://capivarajs.github.io/components.html#constants
      */
-    constants: ['title', 'language'],
+    constants: ['title', 
+                'language',
+                'mask',
+                'datepicker',
+                'timepicker',
+                'openedCalendar',
+                'allowedTimes'
+                ],
     /**
      * @name functions
      * @description Declares the functions that will be accepted by component. See https://capivarajs.github.io/components.html#functions
