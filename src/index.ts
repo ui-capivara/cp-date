@@ -24,10 +24,21 @@ const Component = {
     constants: ['title', 
                 'language',
                 'mask',
+                'format',
                 'datepicker',
                 'timepicker',
                 'openedCalendar',
-                'allowedTimes'
+                'allowedTimes',
+                'defaultTime', 
+                'defaultDate',
+                'step',
+                'weekNumbers',
+                'yearStart',
+                'yearEnd',
+                'dayOfWeekStart',
+                'disabledDates',
+                'minDate',
+                'maxDate'
                 ],
     /**
      * @name functions
