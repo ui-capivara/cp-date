@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="index"
+    errors="0" failures="1" hostname="" id="" package="index" skipped="1"
+    tests="2" time="7.977" timestamp="Mon, 23 Apr 2018 20:59:19 GMT">
+  
+    <testcase name="cp-date 1" classname="index" time="7.977" assertions="2">
+
+      <failure message="Testing if element &lt;p#p1&gt; contains text: &#34;Pessoa: Wed Apr 11 2018 14:47:00 GMT-0300 (-03)&#34;.">    at Object.cp-date 1 (/home/gumga/Documentos/GitHub/components/cp-date/src/test/e2e/cp-date/test.js:15:21)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="cp-date 2" classname="index">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

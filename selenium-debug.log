@@ -1,0 +1,104 @@
+17:59:19.154 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+17:59:19.155 INFO - Launching a standalone Selenium Server
+2018-04-23 17:59:19.186:INFO::main: Logging initialized @481ms
+17:59:19.269 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform LINUX
+17:59:19.270 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform LINUX
+17:59:19.270 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+17:59:19.270 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+17:59:19.270 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+17:59:19.270 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+17:59:19.271 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform LINUX
+2018-04-23 17:59:19.327:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2018-04-23 17:59:19.356:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5f375618{/,null,AVAILABLE}
+2018-04-23 17:59:19.386:INFO:osjs.ServerConnector:main: Started ServerConnector@182406f7{HTTP/1.1}{0.0.0.0:5555}
+2018-04-23 17:59:19.387:INFO:osjs.Server:main: Started @682ms
+17:59:19.387 INFO - Selenium Server is up and running
+17:59:19.668 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+17:59:19.708 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=module, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+17:59:19.733 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=module, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881) on port 6146
+Only local connections are allowed.
+17:59:20.201 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+17:59:21.134 INFO - Detected dialect: OSS
+17:59:21.165 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=module, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+17:59:21.187 INFO - Executing: [set window size])
+17:59:21.306 INFO - Done: [set window size]
+17:59:21.312 INFO - Executing: [get: http://localhost:1111/])
+17:59:21.705 INFO - Done: [get: http://localhost:1111/]
+17:59:21.719 INFO - Executing: [find elements: By.cssSelector: input])
+17:59:21.809 INFO - Done: [find elements: By.cssSelector: input]
+17:59:21.822 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]])
+17:59:21.848 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]]
+17:59:22.860 INFO - Executing: [find element: By.cssSelector: cp-date:nth-child(1) input])
+17:59:22.879 INFO - Done: [find element: By.cssSelector: cp-date:nth-child(1) input]
+17:59:22.886 INFO - Executing: [click: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]])
+17:59:22.935 INFO - Done: [click: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]]
+17:59:22.939 INFO - Executing: [find element: By.cssSelector: cp-date:nth-child(1) input])
+17:59:22.951 INFO - Done: [find element: By.cssSelector: cp-date:nth-child(1) input]
+17:59:22.954 INFO - Executing: [clear: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]])
+17:59:22.972 INFO - Done: [clear: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input]]
+17:59:24.983 INFO - Executing: [find element: By.cssSelector: cp-date:nth-child(1) input])
+17:59:24.998 INFO - Done: [find element: By.cssSelector: cp-date:nth-child(1) input]
+17:59:25.003 INFO - Executing: [send keys: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input], [1, 1, /, 0, 4, /, 2, 0, 1, 8,  , 1, 4, :, 4, 7]])
+17:59:25.063 INFO - Done: [send keys: 0 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: input], [1, 1, /, 0, 4, /, 2, 0, 1, 8,  , 1, 4, :, 4, 7]]
+17:59:25.066 INFO - Executing: [find element: By.cssSelector: p])
+17:59:25.083 INFO - Done: [find element: By.cssSelector: p]
+17:59:25.087 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: p]])
+17:59:26.105 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: unknown error: Element <p id="p1">...</p> is not clickable at point (678, 208). Other element would receive the click: <th>...</th>
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'GumgaHP', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.hqRC4B}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.167, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a2232d71fbb5c2bb367917fca51016d6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:344)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:30)
+	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:22)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+17:59:26.109 WARN - Exception: unknown error: Element <p id="p1">...</p> is not clickable at point (678, 208). Other element would receive the click: <th>...</th>
+  (Session info: chrome=64.0.3282.167)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-38-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'GumgaHP', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881), userDataDir=/tmp/.org.chromium.Chromium.hqRC4B}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.167, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a2232d71fbb5c2bb367917fca51016d6
+17:59:27.307 INFO - Executing: [find element: By.cssSelector: p#p1])
+17:59:27.329 INFO - Done: [find element: By.cssSelector: p#p1]
+17:59:27.334 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: p]])
+17:59:27.359 INFO - Done: [get text: 3 [[ChromeDriver: chrome on LINUX (a2232d71fbb5c2bb367917fca51016d6)] -> css selector: p]]
+17:59:27.364 INFO - Executing: [delete session: 2c777b86-1049-40be-8d26-b9a53348f392])
+17:59:27.444 INFO - Done: [delete session: 2c777b86-1049-40be-8d26-b9a53348f392]

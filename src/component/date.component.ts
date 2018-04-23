@@ -32,10 +32,10 @@ export class CapivaraDate {
     createCpDate() {
         $.datetimepicker.setLocale(this.$constants.language || 'pt-BR')
         $(this.inputElement).datetimepicker({
-            format: this.$constants.format == undefined ? 'd/m/Y H:i' : this.$constants.format,
             timepicker: this.$constants.timepicker == undefined ? true : this.$constants.timepicker,
-            mask: this.$constants.mask == undefined ? true : this.$constants.mask,
             datepicker: this.$constants.datepicker == undefined ? true : this.$constants.datepicker,
+            format: this.$constants.format == undefined ? 'd/m/Y H:i' : this.$constants.format,
+            mask: this.$constants.mask == undefined ? true : this.$constants.mask,
             inline: this.$constants.openedCalendar == undefined ? false : this.$constants.openedCalendar,
             allowTimes: this.$constants.allowedTimes || [],
             defaultTime: this.$constants.defaultTime == undefined ? false : this.$constants.defaultTime,
@@ -51,6 +51,7 @@ export class CapivaraDate {
             onChangeDateTime: (dp, $input) => {
                 $(this.inputElement).datetimepicker({mask: this.$constants.mask == undefined ? true : this.$constants.mask})
                 this.$bindings.cpModel = dp;
+               
             }
         });
     }

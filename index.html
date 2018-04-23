@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <title>Demo CapivaraDate</title>
     <link rel="stylesheet" href="dist/cp-date.css">
 </head>
+
 <body>
     <style>
-        body, html{
+        body,
+        html {
             width: 100%;
             height: 100%;
             background: #F5F5F5;
@@ -18,36 +21,49 @@
             align-items: center;
             justify-content: center;
         }
-        div.col-md-3{
+
+        div.col-md-3 {
             width: 200px;
         }
     </style>
 
-    
-    <div class="col-md-3">
-        <cp-date #myComponent class=""></cp-date> 
+
+    <div class="col-md-4">
+        <cp-date #myComponent></cp-date>
+        
 
 
         <br>
 
+        <p id="p1">Pessoa: ${ pessoa.nascimento }</p>
+
         <br>
-        <button onclick="verPessoa()">Ver</button>
+       
+        <cp-date #component2 class="material"></cp-date>
+
+        <p id="p2">Pessoa2: ${ form.date }</p>
+
+        <br>
+
+        <cp-date #component3 class=""></cp-date>
+
+        <p id="p3">Pessoa3: ${ form2.data }</p>
+
+
     </div>
 
     <script src="dist/cp-date.js"></script>
 
     <script>
-        let pessoa = { nome: 'Mateus' };
+        capivara.controller(document.body, function () {
+            const $ctrl = this;
+    
+            $ctrl.pessoa = { nome: 'Mateus' };
+            $ctrl.form = {};
+            $ctrl.form2 = {};
 
-        // capivara.componentBuilder('myComponent2')
-        //         .context(pessoa)
-        //         .bindings({
-        //             cpModel: 'nascimento'
-        //         })
-        //         .build();
-
-        capivara.componentBuilder('myComponent')
-                .context(pessoa)
+            capivara.componentBuilder('myComponent')
+                .context($ctrl.pessoa)
                 .bindings({
                     cpModel: 'nascimento'
                 })
@@ -74,12 +90,42 @@
                 .build();
 
 
-        function verPessoa(){
-            console.log(pessoa);
-        }
+            capivara.componentBuilder('component2')
+                .context($ctrl.form)
+                .bindings({
+                    cpModel: 'date'
+                })
+                .constants({
+                    title: 'CapivaraDate2',
+                    allowedTimes: ['12:00', '13:00'],
+                    defaultTime: '13:00',
+                    datepicker: false,
+                    format: 'H:i',
+                    mask: '__:__'
+                })
+                .build();
+
+            
+
+            capivara.componentBuilder('component3')
+                .context($ctrl.form2)
+                .bindings({
+                    cpModel: 'data'
+                })
+                .constants({
+                    title: 'Capivara3',
+                    timepicker: false,
+                    format: 'd/m/Y'
+                })
+                .build();
+
+
+           
+        })
 
     </script>
 
 
 </body>
+
 </html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="index"
+    errors="1" failures="0" hostname="" id="" package="index" skipped="0"
+    tests="1" time="0.004000" timestamp="Mon, 23 Apr 2018 18:19:14 GMT">
+  
+    <testcase name="cp-date" classname="index" time="0.004000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Index / cp-date]:
+
+  ReferenceError: sendKeys is not defined
+    at Object.cp-date (/home/gumga/Documentos/GitHub/components/cp-date/src/test/e2e/cp-date/test.js:12:13)
+    at Module.call (/usr/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /usr/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /usr/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
