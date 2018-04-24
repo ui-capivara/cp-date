@@ -124,7 +124,6 @@ export class CapivaraDate {
      * @method void Method responsible of setting the value of the model to the input
      */
     setModelInInput() {
-        console.log(this.$bindings.cpModel)
         if (this.$bindings.cpModel instanceof Date &&
             this.isAllowedMinDate(this.$bindings.cpModel) &&
             this.isAllowedMaxDate(this.$bindings.cpModel) &&
