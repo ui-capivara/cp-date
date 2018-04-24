@@ -1,5 +1,6 @@
 index.html
 config
-src
 bin
+docs
 nightwatch.json
+reports
