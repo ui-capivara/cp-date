@@ -16,6 +16,12 @@ export class CapivaraDate {
 
     $onViewInit() {
         this.inputElement = this.element.querySelector('input.cp-date');
+        if (typeof this.$bindings.cpModel === 'string') {
+            this.$bindings.cpModel = new Date(this.$bindings.cpModel);
+        }
+        if(this.$bindings.cpModel == 'Invalid Date'){
+            delete this.$bindings.cpModel;
+        }
         this.setModelInInput();
         this.createCpDate();
     }
@@ -118,6 +124,7 @@ export class CapivaraDate {
      * @method void Method responsible of setting the value of the model to the input
      */
     setModelInInput() {
+        console.log(this.$bindings.cpModel)
         if (this.$bindings.cpModel instanceof Date &&
             this.isAllowedMinDate(this.$bindings.cpModel) &&
             this.isAllowedMaxDate(this.$bindings.cpModel) &&

@@ -29,27 +29,9 @@
 
 
     <div class="col-md-4">
-        <cp-date #myComponent></cp-date>
-        
-
-
-        <br>
-
-        <p id="p1">Pessoa: ${ pessoa.nascimento }</p>
-
-        <br>
-       
-        <cp-date #component2 class="material"></cp-date>
-
-        <p id="p2">Pessoa2: ${ form.date }</p>
-
-        <br>
-
-        <cp-date #component3 class=""></cp-date>
-
-        <p id="p3">Pessoa3: ${ form2.data }</p>
-
-
+        <cp-date #myComponent></cp-date><br>
+        <p id="p1">Pessoa: [[$ctrl.pessoa.nascimento ]]</p><br>
+        <button cp-click="$ctrl.verPessoa()">Ver Pessoa</button>
     </div>
 
     <script src="dist/cp-date.js"></script>
@@ -57,11 +39,22 @@
     <script>
         capivara.controller(document.body, function () {
             const $ctrl = this;
-    
-            $ctrl.pessoa = { nome: 'Mateus' };
-            $ctrl.form = {};
-            $ctrl.form2 = {};
+            $ctrl.pessoa = {'nome': 'Caio'}
+            $ctrl.pessoa = {'nascimento': '465465465465'}
 
+            if($ctrl.pessoa.nascimento instanceof Date){
+                console.log('oi')
+            }
+
+            $ctrl.verPessoa = () => {
+                console.log($ctrl.pessoa)
+            }
+
+            $ctrl.$onViewInit = () => {
+                // $ctrl.pessoa ={'nascimento': 'Thu Apr 12 2018 08:13:00 GMT-0300 (-03)'}
+            }
+            
+        
             capivara.componentBuilder('myComponent')
                 .context($ctrl.pessoa)
                 .bindings({
@@ -88,39 +81,6 @@
                     maxDate: '2018/04/16' // minDate define o data máxima a ser colocado no componente. Esta opção aceita uma string neste formato '2018/04/15', e colocar 0 traz o dia atual. O valor padrão traz todas as datas
                 })
                 .build();
-
-
-            capivara.componentBuilder('component2')
-                .context($ctrl.form)
-                .bindings({
-                    cpModel: 'date'
-                })
-                .constants({
-                    title: 'CapivaraDate2',
-                    allowedTimes: ['12:00', '13:00'],
-                    defaultTime: '13:00',
-                    datepicker: false,
-                    format: 'H:i',
-                    mask: '__:__'
-                })
-                .build();
-
-            
-
-            capivara.componentBuilder('component3')
-                .context($ctrl.form2)
-                .bindings({
-                    cpModel: 'data'
-                })
-                .constants({
-                    title: 'Capivara3',
-                    timepicker: false,
-                    format: 'd/m/Y'
-                })
-                .build();
-
-
-           
         })
 
     </script>
