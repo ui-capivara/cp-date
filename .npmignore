@@ -1,3 +1,5 @@
 index.html
 config
 src
+bin
+nightwatch.json

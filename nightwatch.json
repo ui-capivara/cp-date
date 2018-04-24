@@ -13,7 +13,7 @@
         "log_path": "",
         "port": 5555,
         "cli_args": {
-            "webdriver.chrome.driver": "./bin/chromedriver"
+            "webdriver.chrome.driver": "./bin/chromedriver-win"
         }
     },
     "test_settings": {

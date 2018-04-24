@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo CapivaraDate</title>
+    <link rel="stylesheet" href="../../../../dist/cp-date.css">
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background: #F5F5F5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.col-md-3 {
+            width: 200px;
+        }
+    </style>
+
+    <script src="../../../../dist/cp-date.js"></script>
+
+    <div class="col-md-4">
+        <h1></h1>
+        <cp-date #myComponent id="cp1"></cp-date><br>
+        <p id="p1">Pessoa: ${ pessoa.nascimento }</p><br>
+        <button></button>
+        <cp-date #component2 class="material"></cp-date>
+        <p id="p2">Pessoa2: ${ form.date }</p><br>
+        <button></button>
+        <cp-date #component3 class=""></cp-date>
+        <p id="p3">Pessoa3: ${ form2.data }</p>
+        <button></button>
+    </div>
+    <script>
+        capivara.controller(document.body, function () {
+            const $ctrl = this;
+
+            $ctrl.pessoa = { nome: 'Mateus' };
+            $ctrl.form = {};
+            $ctrl.form2 = {};
+
+            capivara.componentBuilder('myComponent')
+                .context($ctrl.pessoa)
+                .bindings({
+                    cpModel: 'nascimento'
+                })
+                .constants({
+                    title: 'CapivaraDate',
+                    // language: 'pt-BR', //Option that select the language format of the cp-date calendar. The standard value is 'pt-BR'. The other choices are the abbreviations of the country names ('en' for english for example)
+                    // format: 'H:i', //Option that format the type of the date shown. The standard value is 'd/m/Y H:i'. The result of this will be on this format: 18/04/2018 22:45
+                    // mask: true, // Esta opção pe responsável por setar a máscara na input. Esta mascara pode ser adicionada de duas formas, com uma String(__:__) ou colocando como True, que seguirá o modo que foi colocado no format. O valor padrão é true
+                    // timepicker: false // Option that makes available to pick the hour on the calendar. The standard value is true
+                    // datepicker: false // Option that makes available to pick the date on the calendar. The standard value is true
+                    // openedCalendar: true // Option that hides the input and show directly the calendar . The standard value is false
+                    // allowedTimes: ['12:00', '13:00'], // Option is responsible to provide which hours will be able to be picked. allowedTimes accept an array of strings. This strings should match with the hour/minutes you set up in the format option.
+                    // defaultTime: '13:00', // Option that automatically select a default time for the user. The standard behavior is the default time will be the current time of the user. This option accept a string in the same format set up in format option.
+                    // defaultDate: '10/12/1993' // Option that automatically select a default date for the user. The standard behavior is the default date will be the current date of the user. This option accept a string in the same format set up in format option.
+                    // step: 5, //Opção define a de quantos em quantos minutos será disponibilizado para o usuário clicar dentro do calendário. O valor padrão é 60
+                    // weekNumbers: true // Esta opção define se irá aparecer o número da semana no calendário. O valor padrão é false
+                    // yearStart: 2017 // Esta opção define a data mínima para ser selecionada no atalho do calendário. O valor padrão é 1950.
+                    // yearEnd: 2020 // Esta opção define a data máxima para ser selecionada no atalho do calendário. O valor padrão é 2050.
+                    // dayOfWeekStart : 1 // dayOfWeekStart define qual o dia da semana que o calendário será iniciado. O valor padrão é 0 (domingo)
+                    // disabledDates: ['2018/04/12', '2018/04/11'], //disableDates define quais datas específicas não poderão ser selecionadas. O formato para escolher as datas específicas é ['2018/04/19'].O valor padrão traz todos os dias.
+                    minDate: '2018/04/11', // minDate define o data mínimo a ser colocado no componente. Esta opção aceita uma string neste formato '2018/04/13', e colocar 0 traz o dia atual. O valor padrão traz todas as datas
+                    maxDate: '2018/04/16' // minDate define o data máxima a ser colocado no componente. Esta opção aceita uma string neste formato '2018/04/15', e colocar 0 traz o dia atual. O valor padrão traz todas as datas
+                })
+                .build();
+
+            capivara.componentBuilder('component2')
+                .context($ctrl.form)
+                .bindings({
+                    cpModel: 'date'
+                })
+                .constants({
+                    title: 'CapivaraDate2',
+                    allowedTimes: ['12:00', '13:00'],
+                    defaultTime: '13:00',
+                    datepicker: false,
+                    format: 'H:i',
+                    mask: '__:__'
+                })
+                .build();
+
+            capivara.componentBuilder('component3')
+                .context($ctrl.form2)
+                .bindings({
+                    cpModel: 'data'
+                })
+                .constants({
+                    title: 'Capivara3',
+                    timepicker: false,
+                    format: 'd/m/Y'
+                })
+                .build();
+        })
+    </script>
+</body>
+</html>
