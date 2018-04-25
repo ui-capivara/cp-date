@@ -58,7 +58,7 @@ Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/dsd46pq6/3/)
 ```
 
 Depois de declarar o componente no HTML precisamos inicializa-lo, nesse momento é possível passar alguns parâmetros caso julgarmos necessário.
-Na inicialização do componente, precisar informar o contexto que será aplicado o valor. Exemplo:
+Na inicialização do componente, é necessário informar o contexto que será aplicado o valor. Exemplo:
 ```javascript
 let pessoa = { name: "Caio" };
 
