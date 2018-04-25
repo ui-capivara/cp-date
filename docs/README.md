@@ -54,7 +54,7 @@ Vamos agora criar uma nova instância do componente, primeiro faça a declaraç�
 Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/dsd46pq6/3/)
 
 ```html
-<cp-date #exampleCrop></cp-date>
+<cp-date #dateComponent></cp-date>
 ```
 
 Depois de declarar o componente no HTML precisamos inicializa-lo, nesse momento é possível passar alguns parâmetros caso julgarmos necessário.

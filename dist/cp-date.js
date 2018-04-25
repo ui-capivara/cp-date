@@ -31752,6 +31752,9 @@ var CapivaraDate = /** @class */ (function () {
             minDate: this.$constants.minDate == undefined ? false : this.$constants.minDate,
             maxDate: this.$constants.maxDate == undefined ? false : this.$constants.maxDate,
             onChangeDateTime: function (dp, $input) {
+                if (_this.$constants.openCalendar) {
+                    _this.setModelInInput();
+                }
                 jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this.inputElement).datetimepicker({ mask: _this.$constants.mask == undefined ? true : _this.$constants.mask });
                 _this.$bindings.cpModel = dp;
             }

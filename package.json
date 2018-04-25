@@ -1,6 +1,6 @@
 {
   "name": "cp-date",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cp-date",
   "main": "src/index.ts",
   "scripts": {
