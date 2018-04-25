@@ -55,6 +55,9 @@ export class CapivaraDate {
             minDate: this.$constants.minDate == undefined ? false : this.$constants.minDate,
             maxDate: this.$constants.maxDate == undefined ? false : this.$constants.maxDate,
             onChangeDateTime: (dp, $input) => {
+                if(this.$constants.openCalendar){
+                    this.setModelInInput();
+                }
                 $(this.inputElement).datetimepicker({mask: this.$constants.mask == undefined ? true : this.$constants.mask})
                 this.$bindings.cpModel = dp;
                

@@ -97,47 +97,21 @@ capivara.componentBuilder('dateComponent')
 
 ## Objeto de config
 | Atributo| Valor Default      | Tipo          | Descrição |
-| ---------------- |:----------------:| -------:|---------:|
+| ---------------- |----------------:| -------:|---------:|
+| language | 'pt-BR' | string | Configuração que define a linguagem do calendário. O padrão para utilização são as iniciais da língua|
 | datepicker | true | boolean | Configuração responsável por ativar a seleção de data |
 | timepicker | true | boolean | Configuração responsável por ativar a seleção de hora |
-| mask | true | boolean/string | Configuração responsável por ativar a máscara do input. Também é possível colocar máscaras customizadas, como **__:__** ou **d/m/Y**|
-
-## CropConfig
-
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/9/) que demostramos como deixar o resize livre e o zoom infinito.
-
-| Atributo: Default      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| customClass: ''   | string | Uma classe de sua escolha para adicionar ao contêiner para adicionar estilos personalizados. |
-| enableOrientation: false      | boolean | Ativar ou desativar o suporte a orientação personalizada.  |
-| enableResize: false      | boolean | Ativar ou desativar o suporte para redimensionar a área da janela de visualização. |
-| enableZoom: true      | boolean | Ative a funcionalidade de zoom. Se definido como falso, a rolagem não aumentariam. |
-| enforceBoundary: true      | boolean | Restringe o zoom, de modo que a imagem não pode ser menor que a viewport. |
-| showZoomer: true      | boolean | Ocultar ou Mostrar o controle deslizante de zoom. |
-| viewport: object      | ViewPortConfig | Configuração da parte visível da imagem. |
-
-## ViewPortConfig
-| Atributo: Default      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| width: 170px      | string | Define a largura da área de recorte. |
-| height: 170px      | string | Define a altura da área de recorte. |
-| type: square/circle      | string | Define a a imagem será recortada em circulo ou quadrado. |
-
-## DriveConfig
-| Atributo      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| apiKey      | string | Define a chave da api do google. |
-| clientId      | string | Define o id do cliente google. |
-
-------
-# Integração com google drive
-
-Você pode permitir que seu usuário sincronize as imagens do google drive com o componente, permitindo que ele faça troca das imagens com mais praticidade. Caso você queira utilizar essa funcionalidade, siga as instruções abaixo: 
-
-* 1 - Acesse [Google console](https://console.developers.google.com/apis/api/drive.googleapis.com?project=_) e selecione ou crie seu projeto. 
-* 2 - Após selecionar seu projeto, clique em Ativar na tela de consentimento. 
-* 3 - Com o serviço Google Drive API ativo, vá até a guia Credenciais e crie uma credencial do tipo **Chave de API** e **ID do cliente OAuth**. 
-
-Obs: Quando estiver criando o **ID do cliente OAuth** certifique-se de colocar as URL de origens permitidas.
-
-Veja no [Jsfiddle](https://jsfiddle.net/xfnkp3no/10/) como informar suas chaves.
+| mask | true | boolean/string | Configuração responsável por ativar a máscara do input. Também é possível colocar máscaras customizadas, como **'\__:\__'** ou **'d/m/Y'** |
+| format | 'd/m/Y H:i' | string | Configuração responsável por atribuir o formato da data que será exibida na input|
+| openCalendar | true | boolean | Configuração responsável por fazer com que o calendário fique aberto todo o tempo |
+| allowedTimes | [] | string array | Configuração responsável por selecionar horários disponíveis a serem selecionados, como por exemplo ['12:00', '13:00'], que permitiria somente selecionar as 12:00 e as 13:00 horas |
+| defaultTime | false | boolean/string | Configuração responsável por selecionar a hora padrão, para quando o componente inicializar, ele já vir selecionado esta hora. Exemplo da utilização: '13:00' |
+| defaultDate | false | boolean/string | Configuração responsável por selecionar uma data padrão, para quando o componente inicializar, ele já vir selecionado esta hora. Exemplo da utilização: '10/12/1993' |
+| step | 60 | number | Configuração responsável por atribuir a cada quantos minutos o componente disponibilizará para ser selecionado na parte visual do componente|
+| weekNumbers | true | boolean | Configuração responsável por apresentar os dias da semana do ano no calendário |
+| yearStart | 1950 | number | Configuração responsável por atribuir o ano mínimo selecionável no calendário | 
+| yearEnd | 2050 | number | Configuração responsável por atribuir o ano máximo selecionável no calendário |
+| dayOfWeekStart | 0 | number | Configuração responsável por selecionar o primeiro dia da semana do calendário |
+| disabledDates | [] | string array | Configuração responsável por disabilitar algumas datas de serem selecionadas. Exemplo de utilização: ['2018/04/12','2018/04/11'] |
+| minDate | false | boolean/string | Configuração que define a data mínima selecionável no componente |
+| maxDate | false | boolean/string | Configuração que define a data máxima selecionável no componente |

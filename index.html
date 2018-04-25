@@ -40,11 +40,7 @@
         capivara.controller(document.body, function () {
             const $ctrl = this;
             $ctrl.pessoa = {'nome': 'Caio'}
-            $ctrl.pessoa = {'nascimento': '465465465465'}
-
-            if($ctrl.pessoa.nascimento instanceof Date){
-                console.log('oi')
-            }
+            // $ctrl.pessoa = {'nascimento': ''}
 
             $ctrl.verPessoa = () => {
                 console.log($ctrl.pessoa)
@@ -67,7 +63,7 @@
                     // mask: true, // Esta opção pe responsável por setar a máscara na input. Esta mascara pode ser adicionada de duas formas, com uma String(__:__) ou colocando como True, que seguirá o modo que foi colocado no format. O valor padrão é true
                     // timepicker: false // Option that makes available to pick the hour on the calendar. The standard value is true
                     // datepicker: false // Option that makes available to pick the date on the calendar. The standard value is true
-                    // openedCalendar: true // Option that hides the input and show directly the calendar . The standard value is false
+                    openedCalendar: true, // Option that hides the input and show directly the calendar . The standard value is false
                     // allowedTimes: ['12:00', '13:00'], // Option is responsible to provide which hours will be able to be picked. allowedTimes accept an array of strings. This strings should match with the hour/minutes you set up in the format option.
                     // defaultTime: '13:00', // Option that automatically select a default time for the user. The standard behavior is the default time will be the current time of the user. This option accept a string in the same format set up in format option.
                     // defaultDate: '10/12/1993' // Option that automatically select a default date for the user. The standard behavior is the default date will be the current date of the user. This option accept a string in the same format set up in format option.
