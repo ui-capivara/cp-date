@@ -12,6 +12,7 @@ export class CapivaraDate {
 
     constructor(scope) {
         this.element = scope.element;
+        this.$constants = this.$constants || {};
     }
 
     $onViewInit() {

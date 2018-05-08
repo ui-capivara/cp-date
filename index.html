@@ -29,55 +29,34 @@
 
 
     <div class="col-md-4">
-        <cp-date #myComponent></cp-date><br>
-        <p id="p1">Pessoa: [[$ctrl.pessoa.nascimento ]]</p><br>
+
+        <cp-date cp-model="$ctrl.pessoa.nascimento" 
+                 timepicker="false" 
+                 mask="true" 
+                 format="'d/m/Y'">
+        </cp-date>  
+        
+        <br/>
+        
         <button cp-click="$ctrl.verPessoa()">Ver Pessoa</button>
     </div>
 
     <script src="dist/cp-date.js"></script>
 
     <script>
-        capivara.controller(document.body, function () {
-            const $ctrl = this;
-            $ctrl.pessoa = {'nome': 'Caio'}
-            // $ctrl.pessoa = {'nascimento': ''}
-
-            $ctrl.verPessoa = () => {
-                console.log($ctrl.pessoa)
+        class MyController{
+            constructor(){
+                this.pessoa = {'nome': 'Caio'};
             }
 
-            $ctrl.$onViewInit = () => {
-                // $ctrl.pessoa ={'nascimento': 'Thu Apr 12 2018 08:13:00 GMT-0300 (-03)'}
+            $onViewInit(){}
+
+            verPessoa(){
+                console.log(this.pessoa)
             }
-            
-        
-            capivara.componentBuilder('myComponent')
-                .context($ctrl.pessoa)
-                .bindings({
-                    cpModel: 'nascimento'
-                })
-                .constants({
-                    title: 'CapivaraDate',
-                    // language: 'pt-BR', //Option that select the language format of the cp-date calendar. The standard value is 'pt-BR'. The other choices are the abbreviations of the country names ('en' for english for example)
-                    // format: 'H:i', //Option that format the type of the date shown. The standard value is 'd/m/Y H:i'. The result of this will be on this format: 18/04/2018 22:45
-                    // mask: true, // Esta opção pe responsável por setar a máscara na input. Esta mascara pode ser adicionada de duas formas, com uma String(__:__) ou colocando como True, que seguirá o modo que foi colocado no format. O valor padrão é true
-                    // timepicker: false // Option that makes available to pick the hour on the calendar. The standard value is true
-                    // datepicker: false // Option that makes available to pick the date on the calendar. The standard value is true
-                    openedCalendar: true, // Option that hides the input and show directly the calendar . The standard value is false
-                    // allowedTimes: ['12:00', '13:00'], // Option is responsible to provide which hours will be able to be picked. allowedTimes accept an array of strings. This strings should match with the hour/minutes you set up in the format option.
-                    // defaultTime: '13:00', // Option that automatically select a default time for the user. The standard behavior is the default time will be the current time of the user. This option accept a string in the same format set up in format option.
-                    // defaultDate: '10/12/1993' // Option that automatically select a default date for the user. The standard behavior is the default date will be the current date of the user. This option accept a string in the same format set up in format option.
-                    // step: 5, //Opção define a de quantos em quantos minutos será disponibilizado para o usuário clicar dentro do calendário. O valor padrão é 60
-                    // weekNumbers: true // Esta opção define se irá aparecer o número da semana no calendário. O valor padrão é false
-                    // yearStart: 2017 // Esta opção define a data mínima para ser selecionada no atalho do calendário. O valor padrão é 1950.
-                    // yearEnd: 2020 // Esta opção define a data máxima para ser selecionada no atalho do calendário. O valor padrão é 2050.
-                    // dayOfWeekStart : 1 // dayOfWeekStart define qual o dia da semana que o calendário será iniciado. O valor padrão é 0 (domingo)
-                    // disabledDates: ['2018/04/12', '2018/04/11'], //disableDates define quais datas específicas não poderão ser selecionadas. O formato para escolher as datas específicas é ['2018/04/19'].O valor padrão traz todos os dias.
-                    minDate: '2018/04/11', // minDate define o data mínimo a ser colocado no componente. Esta opção aceita uma string neste formato '2018/04/13', e colocar 0 traz o dia atual. O valor padrão traz todas as datas
-                    maxDate: '2018/04/16' // minDate define o data máxima a ser colocado no componente. Esta opção aceita uma string neste formato '2018/04/15', e colocar 0 traz o dia atual. O valor padrão traz todas as datas
-                })
-                .build();
-        })
+        }
+
+        capivara.controller(document.body, MyController);
 
     </script>
 
