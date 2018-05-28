@@ -1,6 +1,6 @@
 {
-  "name": "cp-date",
-  "version": "1.1.2",
+  "name": "@uicapivara/cp-date",
+  "version": "1.0.3",
   "description": "cp-date",
   "main": "src/index.ts",
   "scripts": {
@@ -53,7 +53,7 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^2.3.0",
+    "capivarajs": "^3.5.0",
     "jquery": "^3.3.1",
     "jquery-datetimepicker": "^2.5.20"
   }

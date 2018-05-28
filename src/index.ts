@@ -26,7 +26,7 @@ const Component = {
                 'mask',
                 'format',
                 'datepicker',
-                'timePicker',
+                'timepicker',
                 'openedCalendar',
                 'allowedTimes',
                 'defaultTime', 

@@ -30,9 +30,12 @@
 
     <div class="col-md-4">
 
-        <cp-date cp-model="$ctrl.pessoa.nascimento" 
-                 options="$ctrl.config">
-        </cp-date>  
+        <cp-date cp-model="$ctrl.pessoa.aniversario"
+        timepicker="false"
+        format= "'d/m/Y'"
+        min-date= "'2018/04/11'"
+        max-date= "'2018/04/15'">
+        </cp-date>
         
         <br/>
         

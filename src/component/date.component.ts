@@ -10,8 +10,8 @@ export class CapivaraDate {
     private oi;
     private inputElement;
 
-    constructor(scope) {
-        this.element = scope.element;
+    constructor($scope, $element) {
+        this.element = $element;
         this.$constants = this.$constants || {};
     }
 
