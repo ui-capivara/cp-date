@@ -55,17 +55,21 @@ capivara.controller(document.body, MyController);
 
 Disponibilizamos alguns exemplos em diferentes ambientes, afim de demonstrar sua funcionalidade.
 
-CapivaraJS - [Jsfiddle](https://jsfiddle.net/dsd46pq6/8/)
+CapivaraJS - [Jsfiddle](https://jsfiddle.net/dsd46pq6/8/) 
+
 Angularjs - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/31/)
+
 Angular - [Jsfiddle](https://jsfiddle.net/1hk7knwq/3665/)
+
 Vuejs - [Jsfiddle](http://jsfiddle.net/td4v7qqd/83/)
+
 React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/84/)
 
 ------
 
 # Configuração
 
-O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos selecionar um intervalo de datas que podem ser selecionadas, que serão entre **11/04/2018** até **15/04/2018**, podendo escolher apenas a data, e escolhendo a mascara do input como **'dd/mm/YYYY'**.
+O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos selecionar um intervalo de datas que podem ser selecionadas, que serão entre **10/05/2018** até **10/06/2018**, podendo escolher apenas a data, e escolhendo a mascara do input como **'dd/mm/YYYY'**.
 
 Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/dsd46pq6/9/)
 
