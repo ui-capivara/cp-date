@@ -69,7 +69,7 @@ React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/84/)
 
 # Configuração
 
-O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos selecionar um intervalo de datas que podem ser selecionadas, que serão entre **10/05/2018** até **10/06/2018**, podendo escolher apenas a data, e escolhendo a mascara do input como **'dd/mm/YYYY'**.
+O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos selecionar um intervalo de datas que podem ser selecionadas, que serão entre **10/05/2018** até **10/06/2018**, podendo escolher apenas a data, e escolhendo a mascara do input como **dd/mm/YYYY**.
 
 Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/dsd46pq6/9/)
 
